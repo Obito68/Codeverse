@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import rajImg from "./assets/raj.jpeg";
+import sandeepImg from "./assets/sandeep.jpeg";
+import pradeepImg from "./assets/pradeep.jpeg";
+import suyogImg from "./assets/suyog.jpeg";
 
 // ─── BRAND CONFIG ────────────────────────────────────────────────────────────
 const BRAND = {
@@ -795,9 +798,9 @@ function AboutPage({ setPage }) {
   const [ref, visible] = useInView();
   const team = [
     { name: "Raj Yadav", role: "Founder & Lead AI Instructor",image: rajImg, exp: "5 yrs · Senior Software Engineer: HDFC" },
-    { name: "Sandeep Vishwakarma", role: "Founder & Mentor", bg: "RN", exp: "10+ yrs of Exp in teaching Students" },
-    { name: "Pradeep Vishwakarma", role: "AI and Programming trainer", bg: "PS", exp: "5 yrs · SRE: TCS" },
-    { name: "Sumit Bansal", role: "Cyber Safety Expert", bg: "VJ", exp: "5 yrs · Ex-Wipro" },
+    { name: "Sandeep Vishwakarma", role: "Founder & Mentor", image: sandeepImg, exp: "10+ yrs of Exp in teaching Students" },
+    { name: "Pradeep Vishwakarma", role: "AI and Programming trainer", image: pradeepImg, exp: "5 yrs · SRE: TCS" },
+    { name: "Suyog Kedar", role: "Cyber Safety Expert", image: suyogImg, exp: "5 yrs · Ex-Wipro" },
   ];
   return (
     <div style={{ paddingTop: 80 }}>
@@ -832,19 +835,93 @@ function AboutPage({ setPage }) {
           </div>
           <div>
             <h2 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "1.8rem", color: "#E2E8F0", textAlign: "center", marginBottom: 40 }}>Meet Our <span style={{ background: "linear-gradient(135deg,#00F5FF,#7B2FFF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Mentors</span></h2>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }} className="courses-grid">
-              {team.map((m, i) => (
-                <div key={m.name} style={{ background: "#0A1628", border: "1px solid #1A2A4A", borderRadius: 14, padding: "28px 20px", textAlign: "center", transition: "all 0.3s" }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = "#7B2FFF44"; e.currentTarget.style.transform = "translateY(-4px)"; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = "#1A2A4A"; e.currentTarget.style.transform = "translateY(0)"; }}
-                >
-                  <img src={m.image} alt={m.name} style={{ width: 56, height: 56, borderRadius: "50%", objectFit: "cover", margin: "0 auto 14px",display: "block",border: "2px solid #00F5FF" }}/>
-                  <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, color: "#E2E8F0", fontSize: "0.92rem", marginBottom: 4 }}>{m.name}</div>
-                  <div style={{ color: "#00F5FF", fontSize: "0.75rem", fontFamily: "'DM Sans', sans-serif", marginBottom: 4 }}>{m.role}</div>
-                  <div style={{ color: "#475569", fontSize: "0.72rem" }}>{m.exp}</div>
-                </div>
-              ))}
-            </div>
+            <div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+    gap: "28px",
+    marginTop: "40px",
+  }}
+>
+  {team.map((m, i) => (
+    <div
+      key={m.name}
+      style={{
+        background: "#0A1628",
+        border: "1px solid #1A2A4A",
+        borderRadius: "22px",
+        overflow: "hidden",
+        transition: "all 0.35s ease",
+        cursor: "pointer",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "translateY(-8px)";
+        e.currentTarget.style.borderColor = "#00F5FF55";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.borderColor = "#1A2A4A";
+      }}
+    >
+      {/* Large Mentor Image */}
+      <div
+        style={{
+          height: "320px",
+          overflow: "hidden",
+          position: "relative",
+        }}
+      >
+        <img
+          src={m.image}
+          alt={m.name}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            transition: "transform 0.5s ease",
+          }}
+        />
+      </div>
+
+      {/* Mentor Info */}
+      <div style={{ padding: "22px" }}>
+        <h3
+          style={{
+            color: "#FFFFFF",
+            fontSize: "1.25rem",
+            fontWeight: "700",
+            marginBottom: "8px",
+            fontFamily: "'Syne', sans-serif",
+          }}
+        >
+          {m.name}
+        </h3>
+
+        <p
+          style={{
+            color: "#00F5FF",
+            fontSize: "0.95rem",
+            marginBottom: "10px",
+            fontWeight: "600",
+          }}
+        >
+          {m.role}
+        </p>
+
+        <p
+          style={{
+            color: "#94A3B8",
+            fontSize: "0.85rem",
+            lineHeight: "1.6",
+          }}
+        >
+          {m.exp}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
           </div>
         </div>
       </section>
