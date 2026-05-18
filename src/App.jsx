@@ -82,9 +82,9 @@ const COURSES = [
 ];
 
 const TESTIMONIALS = [
-  { name: "Priya Sharma", age: 16, course: "Python Programming", avatar: "PS", rating: 5, review: "I joined NexaAcademy not knowing a single line of code. In 8 weeks, I built my own quiz app! The teachers are so patient and the projects make it all real.", city: "Grade 10, DPS" },
+  { name: "Priya Sharma", age: 16, course: "Python Programming", avatar: "PS", rating: 5, review: "I joined CodeVerse Academy not knowing a single line of code. In 8 weeks, I built my own quiz app! The teachers are so patient and the projects make it all real.", city: "Grade 10, DPS" },
   { name: "Arjun Mehta", age: 15, course: "AI & ML Basics", avatar: "AM", rating: 5, review: "The AI course literally changed how I think. I trained an image classifier! My school project won first place because of what I learned here.", city: "Grade 9, Kendriya Vidyalaya" },
-  { name: "Sneha Patel", age: 17, course: "Web Development", avatar: "SP", rating: 5, review: "I built and deployed my portfolio website before finishing the course! NexaAcademy's project-based approach is miles ahead of any YouTube tutorial.", city: "Grade 11, Ryan International" },
+  { name: "Sneha Patel", age: 17, course: "Web Development", avatar: "SP", rating: 5, review: "I built and deployed my portfolio website before finishing the course! CodeVerse Academy's project-based approach is miles ahead of any YouTube tutorial.", city: "Grade 11, Ryan International" },
   { name: "Rohit Kumar", age: 14, course: "Computer Fundamentals", avatar: "RK", rating: 5, review: "My mom enrolled me thinking it was just typing class. Now I'm learning Python too! The teachers make complex things so simple and fun.", city: "Grade 8, St. Xavier's" },
   { name: "Ananya Singh", age: 16, course: "AI Tools for Students", avatar: "AS", rating: 5, review: "The AI Tools course saved my study time by 50%. I now use AI to help with research, presentations, and even debug my code. Every student needs this!", city: "Grade 10, Amity School" },
   { name: "Dev Chauhan", age: 17, course: "Intermediate Software Dev", avatar: "DC", rating: 5, review: "I came in with basic Python knowledge. Now I've deployed two full web apps on the internet. The mentors push you to actually build things — not just watch.", city: "Grade 11, Modern School" },
@@ -100,10 +100,10 @@ const STATS = [
 ];
 
 const FAQS = [
-  { q: "What age group is NexaAcademy for?", a: "Our courses are designed for students aged 10–18, from Class 5 to Class 12. We have beginner tracks for young learners and advanced modules for older students." },
+  { q: "What age group is CodeVerse Academy for?", a: "Our courses are designed for students aged 10–18, from Class 5 to Class 12. We have beginner tracks for young learners and advanced modules for older students." },
   { q: "Do I need any prior coding experience?", a: "Absolutely not! Most of our courses start from zero. We have specific 'zero to hero' tracks for complete beginners. Just bring curiosity!" },
   { q: "Are classes online, offline, or both?", a: "We offer both! In-person batches at our center with full lab access, and live online classes via Zoom with recorded replays. Hybrid options also available." },
-  { q: "What certificate will I receive?", a: "Students receive NexaAcademy completion certificates for each course, plus optional assessment-based merit certificates that carry industry recognition." },
+  { q: "What certificate will I receive?", a: "Students receive CodeVerse Academy completion certificates for each course, plus optional assessment-based merit certificates that carry industry recognition." },
   { q: "How are the batches structured?", a: "We run small batches of 15–20 students for personal attention. Weekend batches, weekday evening batches, and vacation intensive batches are available." },
   { q: "Can parents track their child's progress?", a: "Yes! Parents receive weekly progress reports, project showcases, and can book 1-on-1 parent-teacher meetings anytime through our parent portal." },
 ];
@@ -708,7 +708,7 @@ function CTABand({ setPage }) {
           Start Your Coding Journey <span style={{ background: "linear-gradient(135deg,#00F5FF,#7B2FFF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Today</span>
         </h2>
         <p style={{ color: "#94A3B8", fontSize: "1rem", lineHeight: 1.8, marginBottom: 36, fontFamily: "'DM Sans', sans-serif" }}>
-          Join 4,200+ students who are already coding, building AI, and shaping their future at NexaAcademy. Free trial class available — no commitment required.
+          Join 4,200+ students who are already coding, building AI, and shaping their future at CodeVerse Academy. Free trial class available — no commitment required.
         </p>
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <GlowButton onClick={() => setPage("Admission")}>📋 Enroll Now — It's Free to Start</GlowButton>
@@ -730,7 +730,7 @@ function Newsletter() {
         <h3 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, color: "#E2E8F0", fontSize: "1.3rem", marginBottom: 8 }}>New Batch Alerts & Tech Tips</h3>
         <p style={{ color: "#64748B", fontSize: "0.88rem", marginBottom: 24, fontFamily: "'DM Sans', sans-serif" }}>Get notified about new batches, free workshops, and weekly coding tips straight to your inbox.</p>
         {sent ? (
-          <div style={{ color: "#10B981", fontFamily: "'Syne', sans-serif", fontWeight: 600, padding: "16px", background: "#10B98111", border: "1px solid #10B98133", borderRadius: 10 }}>✅ You're subscribed! Welcome to the NexaAcademy community.</div>
+          <div style={{ color: "#10B981", fontFamily: "'Syne', sans-serif", fontWeight: 600, padding: "16px", background: "#10B98111", border: "1px solid #10B98133", borderRadius: 10 }}>✅ You're subscribed! Welcome to the CodeVerse Academy community.</div>
         ) : (
           <div style={{ display: "flex", gap: 10 }}>
             <input value={email} onChange={e => setEmail(e.target.value)} placeholder="your@email.com" style={{ flex: 1, background: "#0A1628", border: "1px solid #1A2A4A", borderRadius: 8, padding: "13px 16px", color: "#E2E8F0", fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", outline: "none" }} onFocus={e => e.currentTarget.style.borderColor = "#00F5FF44"} onBlur={e => e.currentTarget.style.borderColor = "#1A2A4A"} />
@@ -802,12 +802,12 @@ function AboutPage({ setPage }) {
   return (
     <div style={{ paddingTop: 80 }}>
       <section style={{ padding: "80px 5vw 60px", background: "linear-gradient(180deg, #0A1628 0%, #050A18 100%)", textAlign: "center" }}>
-        <SectionLabel>About NexaAcademy</SectionLabel>
+        <SectionLabel>About CodeVerse Academy</SectionLabel>
         <h1 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#E2E8F0", marginBottom: 20 }}>
           We Build <span style={{ background: "linear-gradient(135deg,#00F5FF,#7B2FFF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Future Coders</span>
         </h1>
         <p style={{ color: "#94A3B8", maxWidth: 680, margin: "0 auto 40px", fontSize: "1.05rem", lineHeight: 1.8, fontFamily: "'DM Sans', sans-serif" }}>
-          NexaAcademy was founded with one mission: make world-class technology education accessible to every school student in India. We don't just teach coding — we build problem-solvers, creators, and innovators who are ready for the AI-powered future.
+          CodeVerse Academy was founded with one mission: make world-class technology education accessible to every school student in India. We don't just teach coding — we build problem-solvers, creators, and innovators who are ready for the AI-powered future.
         </p>
       </section>
       <section ref={ref} style={{ padding: "60px 5vw", background: "#050A18" }}>
@@ -816,7 +816,7 @@ function AboutPage({ setPage }) {
             <div className={`slide-left ${visible ? "visible" : ""}`}>
               <SectionLabel>Our Mission</SectionLabel>
               <h2 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "2rem", color: "#E2E8F0", marginBottom: 16 }}>Education That Keeps Up with the World</h2>
-              <p style={{ color: "#94A3B8", lineHeight: 1.9, fontFamily: "'DM Sans', sans-serif", marginBottom: 16 }}>The world is changing faster than any textbook can keep up with. At NexaAcademy, we update our curriculum quarterly to ensure every student learns skills that are actually in demand — not just theory from a decade ago.</p>
+              <p style={{ color: "#94A3B8", lineHeight: 1.9, fontFamily: "'DM Sans', sans-serif", marginBottom: 16 }}>The world is changing faster than any textbook can keep up with. At CodeVerse Academy, we update our curriculum quarterly to ensure every student learns skills that are actually in demand — not just theory from a decade ago.</p>
               <p style={{ color: "#94A3B8", lineHeight: 1.9, fontFamily: "'DM Sans', sans-serif", marginBottom: 24 }}>Our philosophy: every student learns best when they build something real. That's why every module ends with a hands-on project — not a multiple-choice exam.</p>
               <GlowButton onClick={() => setPage("Admission")}>Join Our Next Batch</GlowButton>
             </div>
@@ -981,7 +981,7 @@ function AdmissionPage() {
         <div style={{ fontSize: "4rem", marginBottom: 20 }}>🚀</div>
         <h2 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "2rem", color: "#E2E8F0", marginBottom: 16 }}>You're Enrolled!</h2>
         <p style={{ color: "#94A3B8", lineHeight: 1.8, fontFamily: "'DM Sans', sans-serif", marginBottom: 24 }}>
-          Welcome to NexaAcademy, <strong style={{ color: "#00F5FF" }}>{form.name}</strong>! Your enrollment for <strong style={{ color: "#7B2FFF" }}>{form.course}</strong> has been received. Our team will contact you within 24 hours with batch details.
+          Welcome to CodeVerse Academy, <strong style={{ color: "#00F5FF" }}>{form.name}</strong>! Your enrollment for <strong style={{ color: "#7B2FFF" }}>{form.course}</strong> has been received. Our team will contact you within 24 hours with batch details.
         </p>
         <div style={{ background: "#0A1628", border: "1px solid #10B98133", borderRadius: 12, padding: "20px", color: "#10B981", fontFamily: "'JetBrains Mono', monospace", fontSize: "0.85rem" }}>
           ✅ Application ID: NXA-{Math.floor(100000 + Math.random() * 900000)}<br />
@@ -1143,7 +1143,7 @@ function ProjectsPage() {
         <h1 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "clamp(2rem, 5vw, 3rem)", color: "#E2E8F0", marginBottom: 12 }}>
           Built by <span style={{ background: "linear-gradient(135deg,#00F5FF,#7B2FFF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Our Students</span>
         </h1>
-        <p style={{ color: "#94A3B8", fontFamily: "'DM Sans', sans-serif", maxWidth: 500, margin: "0 auto" }}>120+ real projects built and deployed by NexaAcademy students. Not simulations — actual working software.</p>
+        <p style={{ color: "#94A3B8", fontFamily: "'DM Sans', sans-serif", maxWidth: 500, margin: "0 auto" }}>120+ real projects built and deployed by CodeVerse Academy students. Not simulations — actual working software.</p>
       </section>
       <section style={{ padding: "40px 5vw 80px", background: "#050A18" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }} className="courses-grid">
@@ -1187,7 +1187,7 @@ function GalleryPage() {
     <div style={{ paddingTop: 80 }}>
       <section style={{ padding: "80px 5vw 60px", textAlign: "center", background: "linear-gradient(180deg,#0A1628,#050A18)" }}>
         <SectionLabel>Gallery</SectionLabel>
-        <h1 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "clamp(2rem, 5vw, 3rem)", color: "#E2E8F0", marginBottom: 12 }}>Life at <span style={{ background: "linear-gradient(135deg,#00F5FF,#7B2FFF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>NexaAcademy</span></h1>
+        <h1 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "clamp(2rem, 5vw, 3rem)", color: "#E2E8F0", marginBottom: 12 }}>Life at <span style={{ background: "linear-gradient(135deg,#00F5FF,#7B2FFF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>CodeVerse Academy</span></h1>
       </section>
       <section style={{ padding: "40px 5vw 80px", background: "#050A18" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }} className="courses-grid">
