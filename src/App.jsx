@@ -469,7 +469,7 @@ function WhyUs() {
     <section ref={ref} style={{ padding: "100px 5vw", background: "#050A18" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: 60 }}>
-          <SectionLabel>Why NexaAcademy</SectionLabel>
+          <SectionLabel>Why CodeVerse Academy</SectionLabel>
           <SectionTitle sub="We're not just another computer class. We're building the next generation of tech leaders.">
             <h2 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", color: "#E2E8F0" }}>
               Built Different. Built for the <span style={{ background: "linear-gradient(135deg,#00F5FF,#7B2FFF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Future.</span>
